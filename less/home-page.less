@@ -14,9 +14,13 @@
     }
   
   }
+
 .image-intro {
   img {
     border-radius: 10px;
+    @media @mobile {
+      width:100%;
+    }
   }
   
 }
@@ -31,14 +35,35 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      @media @mobile {
+        width: 100%;
+      }
+
     }
 
+  }
+
+  .sky {
     @media @mobile {
-      .space-images {
-        flex-direction: column;
+      display: none;
+    }
+  }
+
+  .launch {
+    @media @mobile {
+      display: none;
+    }
+  }
+
+  .blast {
+    @media @mobile {
+      img {
+        border-radius: 5px;
+        width: 100px;
       }
+    }
   }
-  }
+  
 
   .visit-planets {
     padding: 15px;
@@ -55,23 +80,40 @@
   .walk {
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
-    padding: 50px 60px;
+    padding: 50px 40px;
     display: flex;
+    align-items: center;
     justify-content: center;
-       @media @mobile {
-      .walk {
-        display: flex;
-        flex-direction: column;
-        border : 1px solid red; 
-        // justify-content: center;
-      }
+
+    @media @mobile {
+      padding: 25px 10px;
+      flex-direction: column-reverse;
+    }
+  }
+  
+  .walk-img {
+    width: 46%;
+    margin-left: 4%;
+    
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    @media @mobile {
+      border-radius: 5px;
+      width: 100%;
+    }
   }
 
     .walk-text {
-      width: 50%;
+      width: 100%;
 
       h3 {
         margin-bottom: 10px;
+        @media @mobile {
+          margin-top: 20px;
+        }
       }
 
       p {
@@ -79,24 +121,13 @@
       }
 
       .btn {
-        .custom-btn(1.5rem, @btn-bg-color)
-
+        .custom-btn(1.5rem, @btn-bg-color);
         @media @mobile {
-          .custom-btn(15rem, @btn-bg-color)
           width: 100%;
+          height: 50px;
         }
       }
     }
     
-    .walk-img {
-      width: 46%;
-      margin-left: 4%;
-      
-      img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-    }
+    
   }
-}// home
