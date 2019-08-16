@@ -1,1 +1,14 @@
 // Mixins Here
+.flex-baseline(@justify: center, @align: center){
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.custom-btn(@size: 1.5rem, @color:white){
+    border: 3px solid @color;
+    border-radius: 5px;
+    font-size: @size;
+    background-color: gray;
+
+}
